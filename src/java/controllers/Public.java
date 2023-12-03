@@ -96,7 +96,7 @@ public class Public extends HttpServlet {
                     url = "/login.jsp";
                 } else {
                     try {
-                        User userInfo = MusicDB.getUserInfo(username, password);
+                        User userInfo = MusicDB.getUserInfo(username);
                         String userType = userInfo.getUserType();
 
                         User loggedInUser = new User(userID, username, password, userType);
@@ -138,14 +138,14 @@ public class Public extends HttpServlet {
 
                 String validUsername = Validation.isValidUsername(username, "Username", errors);
                 String validPassword = Validation.isValidPassword(password, "Password", errors);            
-                
+                url = "/register.jsp";
                 if (errors.isEmpty()) {
                     user.setUsername(validUsername);
                     user.setPassword(hash);
                     user.setUserType("user");
                     try {
                         MusicDB.insertUser(user);
-                        
+                        url = "/login.jsp";
                     } catch (SQLException ex) {
                         Logger.getLogger(Public.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -154,7 +154,7 @@ public class Public extends HttpServlet {
                 request.setAttribute("user", user);
                 request.setAttribute("message", errors);
                 
-                url = "/register.jsp";
+                
 
                 break;
             }

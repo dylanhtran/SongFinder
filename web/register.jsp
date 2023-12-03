@@ -3,7 +3,7 @@
 
 <%
 if (session.getAttribute("loggedInUser")!= null) {
-    response.sendRedirect("userPage.jsp");
+    response.sendRedirect("userHome.jsp");
     return;
 }
 %>
@@ -21,7 +21,7 @@ if (session.getAttribute("loggedInUser")!= null) {
         <jsp:include page="layout/navbar.jsp" />
         
         <main id="main-content">
-            <h1>Register for MovieGenius</h1>
+            <h1><center>Register for Song Finder</center></h1>
             <br>
             <div class="container">
                 <div class="row">
@@ -36,10 +36,6 @@ if (session.getAttribute("loggedInUser")!= null) {
                             </ul>
                         </c:if>
                         <form method="post" action="Public">
-                            <label for="email-field">Email</label>
-                            <br>
-                            <input type="email" id="email-field" name="email" class="form-control">
-                            <br>
                             <label for="username-field">Username</label>
                             <br>
                             <input type="text" id="username-field" name="username" class="form-control">

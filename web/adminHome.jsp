@@ -16,7 +16,7 @@
     </head>
     <body>
         <jsp:include page="layout/navbar.jsp" />
-        <h1><center>Song Finder</center></h1>
-        <h2><center>Please log in to get started!</center></h2>
+        <h1><center>Admin Home</center></h1>
+        <h2><center>Please use the nav bar</center></h2>
     </body>
 </html>
