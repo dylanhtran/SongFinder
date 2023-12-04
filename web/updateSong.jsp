@@ -31,13 +31,13 @@
                                     <form method="post" action="Private">
                                         <label for="title-field">Title</label>
                                         <br>
-                                        <input type="text" id="title-field" name="title" class="form-control">
+                                        <input type="text" id="title-field" name="title" class="form-control" value="${title}">
 
                                         <br>
 
                                         <label for="artist-field">Artist</label>
                                         <br>
-                                        <input type="text" id="artist-field" name="artist" class="form-control">
+                                        <input type="text" id="artist-field" name="artist" class="form-control" value="${artist}">
                                         <br>
                                         <br>
                                         <input type="hidden" name="songID" value="${songID}"/>

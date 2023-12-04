@@ -217,8 +217,12 @@ public class Private extends HttpServlet {
             }
             case "updateSongPage": {
                 url = "/updateSong.jsp";
+                String title = request.getParameter("title");
+                String artist = request.getParameter("artist");
                 int songID = Integer.parseInt(request.getParameter("songID"));
                 request.setAttribute("songID", songID);
+                request.setAttribute("title", title);
+                request.setAttribute("artist", artist);
                 break;
             }
             case "updateSong": {

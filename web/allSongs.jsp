@@ -45,6 +45,8 @@
                                 </th>
                                 <th style="width:12%">
                                     <form action="Private" method="post">
+                                        <input type="hidden" name="title" value="${song.title}"/>
+                                        <input type="hidden" name="artist" value="${song.artist}"/>
                                         <input type="hidden" name="songID" value="${song.songID}"/>
                                         <input type="hidden" name="action" value="updateSongPage" class="form-control"/>
                                         <button type="submit" class="btn btn-success">Update Song</button>
